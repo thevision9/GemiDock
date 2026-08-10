@@ -43,7 +43,7 @@
 
 
 
-📖 How to Use
+## 📖 How to Use
 1. Organizing Chats into Folders
 Create a Root Folder: Click + New folder inside the Folders section.
 
