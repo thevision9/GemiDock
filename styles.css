@@ -1,0 +1,92 @@
+#gemini-folders-root {
+  margin: 12px;
+  padding: 12px;
+  background-color: var(--bard-color-surface-container, #f0f4f9);
+  border-radius: 12px;
+  font-family: Google Sans, Roboto, sans-serif;
+  color: var(--bard-color-on-surface, #1f1f1f);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gf-add-btn {
+  background: #0b57d0;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.gf-add-btn:hover {
+  background: #0842a0;
+}
+
+.gf-folder {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.gf-folder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gf-folder-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gf-chat-list {
+  display: none;
+  padding: 4px 0;
+}
+
+.gf-folder.open .gf-chat-list {
+  display: block;
+}
+
+.gf-chat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.gf-chat-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gf-action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.gf-action-btn:hover {
+  opacity: 1.0;
+}
