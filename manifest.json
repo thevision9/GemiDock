@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Folders",
+  "name": "GemiDock - Custom Folders For Gemini AI",
   "version": "1.0",
   "description": "Organize your Google Gemini chats into custom folders.",
   "permissions": ["storage"],
