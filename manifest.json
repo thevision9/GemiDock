@@ -9,7 +9,8 @@
     {
       "matches": ["https://gemini.google.com/*"],
       "css": ["styles.css"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ]
 }
