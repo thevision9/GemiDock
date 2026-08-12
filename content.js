@@ -760,14 +760,16 @@
         }
 
         // 3. Fallback: Exponential Backoff Retry Loop
-        retryCount++;
+        const MAX_RETRIES = 15;
         if (retryCount <= MAX_RETRIES) {
           console.log(`[GemiDock] Target element not found yet. Retrying (${retryCount}/${MAX_RETRIES}) in ${delay}ms...`);
+          retryCount++;
           timeoutId = setTimeout(attemptInitialization, delay);
-          delay = Math.min(delay * 2, 8000); // 500ms, 1000ms, 2000ms, 4000ms, 8000ms
+          delay = Math.min(delay * 1.5, 5000); 
         } else {
-          console.warn('[GemiDock] Max retries reached waiting for target element. Disconnecting initialization observer.');
-          cleanup();
+          console.warn('[GemiDock] Max retries reached. Resetting observer for SPA navigation.');
+          retryCount = 0;
+          delay = 500;
         }
       } catch (err) {
         console.warn('[GemiDock] Error during attemptInitialization:', err);
